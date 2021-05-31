@@ -12,6 +12,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'dense-analysis/ale'
 	"coc
 	Plug 'neoclide/coc.nvim'
+  "sintaxe 
+	Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 """"""""""""""""""""""""
