@@ -10,14 +10,22 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-surround'
 	"verificação de sintaxe
 	Plug 'dense-analysis/ale'
+	"coc
+	Plug 'neoclide/coc.nvim'
 call plug#end()
 
 """"""""""""""""""""""""
 "configurações iniciais"
 """"""""""""""""""""""""
+
+
 syntax on 
 colorscheme onedark
 
+set autoindent      "novas linhas herdão a indentação da linha anterior
+set shiftround
+set ignorecase      "Maiúsculo = minusculo na pesquisa
+set incsearch       "mastra a busca parcial 
 set number 
 set mouse=a
 set title
@@ -25,7 +33,6 @@ set cursorline
 set encoding=utf-8 " Importante para o YCM
 set termguicolors
 set autoindent
-set incsearch
 set wildmenu
 set confirm
 set magic
@@ -35,6 +42,7 @@ set ttimeoutlen=50
 """"""""""""""""""""""""
 "       cursor         "
 """"""""""""""""""""""""
+
 
 if has("autocmd")
   au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
@@ -46,6 +54,37 @@ if has("autocmd")
     \ endif
   au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 endif
+
+
+""""""""""""""""""""""""
+"     vim-airline     "
+""""""""""""""""""""""""
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 
 """"""""""""""""""""""""
@@ -66,6 +105,7 @@ let g:airline_symbols.branch = ' ⭠ '
 let g:airline_symbols.readonly = ' ⭤ '
 let g:airline_symbols.linenr = ' ⭡ '
 
+
 """"""""""""""""""""""""
 "         ale          "
 """"""""""""""""""""""""
@@ -79,6 +119,7 @@ let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 "highlight ALEErrorSign ctermbg=NONE ctermfg=red
 "highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+
 
 """"""""""""""""""""""""
 "       atalhos        "
