@@ -134,7 +134,7 @@ let mapleader="\<space>"
 
 map q :quit<CR>
 map <C-q> :quit!<CR>
-map <leader>j :bel term<CR>
+map <leader>j :bo term<CR>
 
 "NERDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
