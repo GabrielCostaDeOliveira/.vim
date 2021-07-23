@@ -28,6 +28,7 @@ call plug#end()
 syntax on 
 colorscheme onedark
 
+set list            "mostar caracteres invisíveis 
 set autoindent      "novas linhas herdão a indentação da linha anterior
 set shiftround
 set ignorecase      "Maiúsculo = minusculo na pesquisa
