@@ -18,7 +18,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'preservim/nerdtree'
   "nerdtree
   Plug 'preservim/nerdtree' 
-call plug#end()
+  "git 
+  Plug 'airblade/vim-gitgutter'
+  call plug#end()
 
 """"""""""""""""""""""""
 "configurações iniciais"
