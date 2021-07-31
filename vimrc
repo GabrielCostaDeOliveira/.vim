@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged')
 	"verificação de sintaxe
 	Plug 'dense-analysis/ale'
 	"coc
-	Plug 'neoclide/coc.nvim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   "sintaxe 
 	Plug 'sheerun/vim-polyglot'
   "nerdtree 
