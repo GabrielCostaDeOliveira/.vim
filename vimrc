@@ -129,6 +129,12 @@ let g:ale_sign_warning = '⚠'
 "highlight ALEErrorSign ctermbg=NONE ctermfg=red
 "highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
+""""""""""""""""""""""""
+"       termbug        "
+""""""""""""""""""""""""
+packadd termdebug 
+let g:termbug_popup  = 0
+let g:termdebug_wide = 163
 
 """"""""""""""""""""""""
 "       atalhos        "
