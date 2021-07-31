@@ -136,6 +136,7 @@ let g:ale_sign_warning = '⚠'
 let mapleader="\<space>"
 
 map q :quit<CR>
+map <leader>; A;<esc>]
 map <C-q> :quit!<CR>
 map <leader>j :bo term<CR>
 
