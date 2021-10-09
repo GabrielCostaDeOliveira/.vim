@@ -47,26 +47,20 @@ set confirm
 set magic
 set ttimeoutlen=50
 
+"configurações iniciais coc
 
-""""""""""""""""""""""""
-"       cursor         "
-""""""""""""""""""""""""
+set hidden " if hidden is not set, TextEdit might fail.
+set nobackup " Some servers have issues with backup files, see #649
+set nowritebackup
+set cmdheight=2 " Better display for messages
+set updatetime=300 " You will have bad experience for diagnostic messages when it's default 4000.
+set shortmess+=c   " don't give ins-completion-menu messages.
+set signcolumn=yes " always show signcolumns
 
-
-if has("autocmd")
-  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
-  au InsertEnter,InsertChange *
-    \ if v:insertmode == 'i' | 
-    \   silent execute '!echo -ne "\e[6 q"' | redraw! |
-    \ elseif v:insertmode == 'r' |
-    \   silent execute '!echo -ne "\e[4 q"' | redraw! |
-    \ endif
-  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
-endif
 
 
 """"""""""""""""""""""""
-"     vim-airline     "
+"        coc-vim       "
 """"""""""""""""""""""""
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -94,6 +88,23 @@ endif
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+
+""""""""""""""""""""""""
+"       cursor         "
+""""""""""""""""""""""""
+
+
+if has("autocmd")
+  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+  au InsertEnter,InsertChange *
+    \ if v:insertmode == 'i' | 
+    \   silent execute '!echo -ne "\e[6 q"' | redraw! |
+    \ elseif v:insertmode == 'r' |
+    \   silent execute '!echo -ne "\e[4 q"' | redraw! |
+    \ endif
+  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+endif
 
 
 """"""""""""""""""""""""
