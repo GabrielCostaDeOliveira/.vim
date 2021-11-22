@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	"completar parenteses
-	Plug 'jiangmiao/auto-pairs'
+	"Plug 'jiangmiao/auto-pairs'
 	"
 	Plug 'tpope/vim-surround'
 	"verificação de sintaxe
@@ -45,7 +45,7 @@ set autoindent
 set wildmenu
 set confirm
 set magic
-set ttimeoutlen=50
+set ttimeoutlen=0
 
 "configurações iniciais coc
 
@@ -129,14 +129,16 @@ let g:airline_symbols.linenr = ' ⭡ '
 """"""""""""""""""""""""
 "         ale          "
 """"""""""""""""""""""""
+let g:ale_linters = { 'cpp': ['clang', 'g++'], 
+                     \'c': ['clang'] }
 
-let g:ale_linters = {'c': ['gcc']}
-let b:ale_fixers = ['prettier', 'eslint']
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
+"let g:ale_linters = {'c': ['gcc']}
+"let b:ale_fixers = ['prettier', 'eslint']
+"let g:ale_echo_msg_error_str = 'E'
+"let g:ale_echo_msg_warning_str = 'W'
+"let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+"let g:ale_sign_error = '✘'
+"let g:ale_sign_warning = '⚠'
 "highlight ALEErrorSign ctermbg=NONE ctermfg=red
 "highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
