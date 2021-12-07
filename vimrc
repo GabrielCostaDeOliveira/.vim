@@ -1,26 +1,24 @@
 call plug#begin('~/.vim/plugged')
-	"tema
-	Plug 'joshdick/onedark.vim'		
-	"air-line
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	"completar parenteses
-	"Plug 'jiangmiao/auto-pairs'
-	"
-	Plug 'tpope/vim-surround'
-	"verificação de sintaxe
-	Plug 'dense-analysis/ale'
-	"coc
+  "tema
+  Plug 'joshdick/onedark.vim'		
+  "air-line
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  "
+  Plug 'tpope/vim-surround'
+  "verificação de sintaxe
+  Plug 'dense-analysis/ale'
+  "coc
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   "sintaxe 
-	Plug 'sheerun/vim-polyglot'
+  Plug 'sheerun/vim-polyglot'
   "nerdtree 
   Plug 'preservim/nerdtree'
   "nerdtree
   Plug 'preservim/nerdtree' 
   "git 
   Plug 'airblade/vim-gitgutter'
-  call plug#end()
+call plug#end()
 
 """"""""""""""""""""""""
 "configurações iniciais"
@@ -54,6 +52,7 @@ set nobackup " Some servers have issues with backup files, see #649
 set nowritebackup
 set cmdheight=2 " Better display for messages
 set updatetime=300 " You will have bad experience for diagnostic messages when it's default 4000.
+set redrawtime=10000
 set shortmess+=c   " don't give ins-completion-menu messages.
 set signcolumn=yes " always show signcolumns
 
@@ -155,9 +154,13 @@ let g:termdebug_wide = 163
 let mapleader="\<space>"
 
 map q :quit<CR>
-map <leader>; A;<esc>]
+map <leader>; A;<esc>
 map <C-q> :quit!<CR>
 map <leader>j :bo term<CR>
+
+"Quicky space to normal mode
+imap jj <esc>
+
 
 "NERDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
