@@ -1,23 +1,25 @@
 call plug#begin('~/.vim/plugged')
-  "tema
-  Plug 'joshdick/onedark.vim'		
-  "air-line
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  "
-  Plug 'tpope/vim-surround'
-  "verificação de sintaxe
-  Plug 'dense-analysis/ale'
-  "coc
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  "sintaxe 
-  Plug 'sheerun/vim-polyglot'
-  "nerdtree 
-  Plug 'preservim/nerdtree'
-  "nerdtree
-  Plug 'preservim/nerdtree' 
-  "git 
-  Plug 'airblade/vim-gitgutter'
+	"tema
+	Plug 'joshdick/onedark.vim'		
+	"air-line
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	"
+	Plug 'tpope/vim-surround'
+	"verificação de sintaxe
+	Plug 'dense-analysis/ale'
+	"coc
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	"sintaxe 
+	Plug 'sheerun/vim-polyglot'
+	"nerdtree 
+	Plug 'preservim/nerdtree'
+	"nerdtree
+	Plug 'preservim/nerdtree' 
+	"git 
+	Plug 'airblade/vim-gitgutter'
+	"rainbow 
+	Plug 'luochen1990/rainbow'
 call plug#end()
 
 """"""""""""""""""""""""
@@ -56,6 +58,17 @@ set redrawtime=10000
 set shortmess+=c   " don't give ins-completion-menu messages.
 set signcolumn=yes " always show signcolumns
 
+
+""""""""""""""""""""""""
+"        rainbow       "
+""""""""""""""""""""""""
+
+let g:rainbow_active = 1
+
+let g:rainbow_conf = {
+\	'guifgs': [ '#e5c07b', '#e06c75','Aquamarine', '#c678dd', 'firebrick','lightyellow', 'DeepPink', 'BlueViolet'],
+\	'ctermfgs': ['lightyellow', 'lightblue', 'lightcyan', 'lightmagenta'],
+\}
 
 
 """"""""""""""""""""""""
