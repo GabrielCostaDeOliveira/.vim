@@ -161,6 +161,14 @@ map <leader>; A;<esc>
 map <C-q> :quit!<CR>
 map <leader>j :bo term<CR>
 
+"Movimentação de tela rápida
+
+nmap <silent> <C-h> <C-w>h
+nmap <silent> <C-j> <C-w>j
+nmap <silent> <C-k> <C-w>k
+nmap <silent> <C-l> <C-w>l
+
+
 "Quicky space to normal mode
 imap jj <esc>
 
