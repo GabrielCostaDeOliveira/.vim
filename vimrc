@@ -20,6 +20,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'airblade/vim-gitgutter'
 	"rainbow 
 	Plug 'luochen1990/rainbow'
+	"JSX syntax highlighting and indenting
+	Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
 
 """"""""""""""""""""""""
@@ -134,13 +136,13 @@ let g:airline_powerline_fonts = 1
 let g:ale_linters = { 'cpp': ['clang', 'g++'], 
                      \'c': ['clang'] }
 
+"let g:ale_sign_error = '❌'
+"let g:ale_sign_warning = '⚠️'
 "let g:ale_linters = {'c': ['gcc']}
 "let b:ale_fixers = ['prettier', 'eslint']
 "let g:ale_echo_msg_error_str = 'E'
 "let g:ale_echo_msg_warning_str = 'W'
 "let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-"let g:ale_sign_error = '✘'
-"let g:ale_sign_warning = '⚠'
 "highlight ALEErrorSign ctermbg=NONE ctermfg=red
 "highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
@@ -150,6 +152,12 @@ let g:ale_linters = { 'cpp': ['clang', 'g++'],
 packadd termdebug 
 let g:termbug_popup  = 0
 let g:termdebug_wide = 163
+
+""""""""""""""""""""""""
+"         jsx          "
+""""""""""""""""""""""""
+
+let g:vim_jsx_pretty_highlight_close_tag = 1
 
 """"""""""""""""""""""""
 "       atalhos        "
