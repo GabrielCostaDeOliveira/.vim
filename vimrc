@@ -22,6 +22,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'luochen1990/rainbow'
 	"JSX syntax highlighting and indenting
 	Plug 'maxmellon/vim-jsx-pretty'
+	"close tag
+	Plug 'mattn/emmet-vim'
 call plug#end()
 
 """"""""""""""""""""""""
