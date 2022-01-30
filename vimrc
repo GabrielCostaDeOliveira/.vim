@@ -24,6 +24,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'maxmellon/vim-jsx-pretty'
 	"close tag
 	Plug 'mattn/emmet-vim'
+	"sintaxe sytale components
+	Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 call plug#end()
 
 """"""""""""""""""""""""
@@ -160,6 +162,15 @@ let g:termdebug_wide = 163
 """"""""""""""""""""""""
 
 let g:vim_jsx_pretty_highlight_close_tag = 1
+
+""""""""""""""""""""""""
+"         jsx          "
+""""""""""""""""""""""""
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx',
+\  },
+\}
 
 """"""""""""""""""""""""
 "       atalhos        "
