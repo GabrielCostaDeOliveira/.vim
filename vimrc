@@ -4,16 +4,12 @@ call plug#begin('~/.vim/plugged')
 	"air-line
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
-	"
-	Plug 'tpope/vim-surround'
 	"verificação de sintaxe
 	Plug 'dense-analysis/ale'
 	"coc
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	"sintaxe 
 	Plug 'sheerun/vim-polyglot'
-	"nerdtree 
-	Plug 'preservim/nerdtree'
 	"nerdtree
 	Plug 'preservim/nerdtree' 
 	"git 
@@ -47,7 +43,6 @@ set title
 set cursorline
 set encoding=utf-8 " Importante para o YCM
 set termguicolors
-set autoindent
 set wildmenu
 set confirm
 set magic
@@ -59,7 +54,7 @@ set hidden " if hidden is not set, TextEdit might fail.
 set nobackup " Some servers have issues with backup files, see #649
 set nowritebackup
 set cmdheight=2 " Better display for messages
-set updatetime=300 " You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=200 " You will have bad experience for diagnostic messages when it's default 4000.
 set redrawtime=10000
 set shortmess+=c   " don't give ins-completion-menu messages.
 set signcolumn=yes " always show signcolumns
@@ -137,8 +132,7 @@ let g:airline_powerline_fonts = 1
 """"""""""""""""""""""""
 "         ale          "
 """"""""""""""""""""""""
-let g:ale_linters = { 'cpp': ['clang', 'g++'], 
-                     \'c': ['clang'] }
+let g:ale_linters = {'c': ['clang'], 'cpp': ['clang', 'g++']}
 
 "let g:ale_sign_error = '❌'
 "let g:ale_sign_warning = '⚠️'
@@ -181,6 +175,7 @@ map q :quit<CR>
 map <leader>; A;<esc>
 map <C-q> :quit!<CR>
 map <leader>j :bo term<CR>
+map <leader>w :w<CR>
 
 "Movimentação de tela rápida
 
