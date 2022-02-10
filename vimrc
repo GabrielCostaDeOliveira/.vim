@@ -34,32 +34,32 @@ call plug#end()
 syntax on 
 colorscheme onedark
 
-set list            "mostar caracteres invisíveis 
+"set list            "mostar caracteres invisíveis 
 set autoindent      "novas linhas herdão a indentação da linha anterior
-set shiftround
-set ignorecase      "Maiúsculo = minusculo na pesquisa
-set incsearch       "mastra a busca parcial 
+"set shiftround
+"set ignorecase      "Maiúsculo = minusculo na pesquisa
+"set incsearch       "mastra a busca parcial 
 set number 
 set mouse=a
 set title
-set cursorline
-set encoding=utf-8 " Importante para o YCM
-set termguicolors
+"set cursorline
+"set encoding=utf-8 " Importante para o YCM
+"set termguicolors
 set wildmenu
 set confirm
-set magic
-set ttimeoutlen=0
+"set magic
+"set ttimeoutlen=0
 
 "configurações iniciais coc
 
-set hidden " if hidden is not set, TextEdit might fail.
-set nobackup " Some servers have issues with backup files, see #649
-set nowritebackup
-set cmdheight=2 " Better display for messages
-set updatetime=200 " You will have bad experience for diagnostic messages when it's default 4000.
-set redrawtime=10000
-set shortmess+=c   " don't give ins-completion-menu messages.
-set signcolumn=yes " always show signcolumns
+""set hidden " if hidden is not set, TextEdit might fail.
+""set nobackup " Some servers have issues with backup files, see #649
+""set nowritebackup
+""set cmdheight=2 " Better display for messages
+""set updatetime=200 " You will have bad experience for diagnostic messages when it's default 4000.
+""set redrawtime=10000
+""set shortmess+=c   " don't give ins-completion-menu messages.
+""set signcolumn=yes " always show signcolumns
 
 
 """"""""""""""""""""""""
