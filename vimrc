@@ -22,6 +22,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'mattn/emmet-vim'
 	"sintaxe sytale components
 	Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+	"close brackets
+	Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 """"""""""""""""""""""""
