@@ -32,7 +32,7 @@ call plug#end()
 
 
 syntax on 
-colorscheme onedark
+colorscheme onedark 
 
 "set list            "mostar caracteres invisíveis 
 set autoindent      "novas linhas herdão a indentação da linha anterior
@@ -40,8 +40,8 @@ set autoindent      "novas linhas herdão a indentação da linha anterior
 "set ignorecase      "Maiúsculo = minusculo na pesquisa
 "set incsearch       "mastra a busca parcial 
 set number 
-set mouse=a
-set title
+"set mouse=a
+"set title
 "set cursorline
 "set encoding=utf-8 " Importante para o YCM
 "set termguicolors
@@ -52,15 +52,13 @@ set confirm
 
 "configurações iniciais coc
 
-""set hidden " if hidden is not set, TextEdit might fail.
-""set nobackup " Some servers have issues with backup files, see #649
-""set nowritebackup
-""set cmdheight=2 " Better display for messages
-""set updatetime=200 " You will have bad experience for diagnostic messages when it's default 4000.
-""set redrawtime=10000
-""set shortmess+=c   " don't give ins-completion-menu messages.
-""set signcolumn=yes " always show signcolumns
+set updatetime=300
 
+""""""""""""""""""""""""
+"       NerdTree       "
+""""""""""""""""""""""""
+
+let NERDTreeMinimalUI=1
 
 """"""""""""""""""""""""
 "        rainbow       "
@@ -68,10 +66,10 @@ set confirm
 
 let g:rainbow_active = 1
 
-let g:rainbow_conf = {
-\	'guifgs': [ '#e5c07b', '#e06c75','Aquamarine', '#c678dd', 'firebrick','lightyellow', 'DeepPink', 'BlueViolet'],
-\	'ctermfgs': ['lightyellow', 'lightblue', 'lightcyan', 'lightmagenta'],
-\}
+"let g:rainbow_conf = {
+"\	'guifgs': [ '#e5c07b', '#e06c75','Aquamarine', '#c678dd', 'firebrick','lightyellow', 'DeepPink', 'BlueViolet'],
+"\	'ctermfgs': ['lightyellow', 'lightblue', 'lightcyan', 'lightmagenta'],
+"\}
 
 
 """"""""""""""""""""""""
@@ -178,7 +176,6 @@ map q :quit<CR>
 map <leader>; A;<esc>
 map <C-q> :quit!<CR>
 map <leader>j :bo term<CR>
-map <leader>w :w<CR>
 
 "Movimentação de tela rápida
 
@@ -194,9 +191,9 @@ imap jj <esc>
 
 "NERDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+"nnoremap <C-n> :NERDTree<CR>
+"nnoremap <C-t> :NERDTreeToggle<CR>
+"nnoremap <C-f> :NERDTreeFind<CR>
 
 "seleção híbrida para mostrar o numero de linha 
 autocmd InsertEnter * :set norelativenumber
