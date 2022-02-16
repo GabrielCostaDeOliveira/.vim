@@ -24,6 +24,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 	"close brackets
 	Plug 'jiangmiao/auto-pairs'
+	"tex
+"	Plug 'lervag/vimtex'
+"
 call plug#end()
 
 """"""""""""""""""""""""
