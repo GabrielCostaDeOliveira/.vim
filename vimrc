@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged')
 	"sintaxe 
 	Plug 'sheerun/vim-polyglot'
 	"nerdtree
-	Plug 'preservim/nerdtree' 
+"	Plug 'preservim/nerdtree' 
 	"git 
 	Plug 'airblade/vim-gitgutter'
 	"rainbow 
@@ -37,6 +37,7 @@ call plug#end()
 syntax on 
 colorscheme onedark 
 
+set hidden
 "set list            "mostar caracteres invisíveis 
 set autoindent      "novas linhas herdão a indentação da linha anterior
 "set shiftround
@@ -61,7 +62,7 @@ set updatetime=300
 "       NerdTree       "
 """"""""""""""""""""""""
 
-let NERDTreeMinimalUI=1
+"let NERDTreeMinimalUI=1
 
 """"""""""""""""""""""""
 "        rainbow       "
@@ -179,6 +180,7 @@ map q :quit<CR>
 map <leader>; A;<esc>
 map <C-q> :quit!<CR>
 map <leader>j :bo term<CR>
+map <leader>f <C-6>
 
 "Movimentação de tela rápida
 
