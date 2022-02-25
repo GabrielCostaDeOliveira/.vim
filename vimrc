@@ -4,14 +4,10 @@ call plug#begin('~/.vim/plugged')
 	"air-line
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
-	"verificação de sintaxe
-	Plug 'dense-analysis/ale'
 	"coc
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	"sintaxe 
 	Plug 'sheerun/vim-polyglot'
-	"nerdtree
-"	Plug 'preservim/nerdtree' 
 	"git 
 	Plug 'airblade/vim-gitgutter'
 	"rainbow 
@@ -137,7 +133,7 @@ let g:airline#extensions#tabline#enabled = 1
 """"""""""""""""""""""""
 "         ale          "
 """"""""""""""""""""""""
-let g:ale_linters = {'c': ['clang'], 'cpp': ['clang', 'g++']}
+"let g:ale_linters = {'c': ['clang'], 'cpp': ['clang', 'g++']}
 
 "let g:ale_sign_error = '❌'
 "let g:ale_sign_warning = '⚠️'
@@ -195,7 +191,7 @@ imap jj <esc>
 
 
 "NERDTree
-nnoremap <leader>n :NERDTreeFocus<CR>
+"nnoremap <leader>n :NERDTreeFocus<CR>
 "nnoremap <C-n> :NERDTree<CR>
 "nnoremap <C-t> :NERDTreeToggle<CR>
 "nnoremap <C-f> :NERDTreeFind<CR>
