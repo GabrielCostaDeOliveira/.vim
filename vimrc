@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged')
 	"git 
 	Plug 'airblade/vim-gitgutter'
 	"rainbow 
-	Plug 'luochen1990/rainbow'
+"	Plug 'luochen1990/rainbow'
 	"JSX syntax highlighting and indenting
 	Plug 'maxmellon/vim-jsx-pretty'
 	"close tag
@@ -21,9 +21,10 @@ call plug#begin('~/.vim/plugged')
 	"close brackets
 	Plug 'jiangmiao/auto-pairs'
 	"tex
-"	Plug 'lervag/vimtex'
-"
-call plug#end()
+	Plug 'lervag/vimtex'
+	"Ale
+	Plug 'dense-analysis/ale'
+	call plug#end()
 
 """"""""""""""""""""""""
 "configurações iniciais"
@@ -103,6 +104,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 
+let b:coc_diagnostic_disable = 1
 """"""""""""""""""""""""
 "       cursor         "
 """"""""""""""""""""""""
@@ -133,10 +135,13 @@ let g:airline#extensions#tabline#enabled = 1
 """"""""""""""""""""""""
 "         ale          "
 """"""""""""""""""""""""
-"let g:ale_linters = {'c': ['clang'], 'cpp': ['clang', 'g++']}
+let g:ale_linters = {
+			\'c': ['clang'], 
+			\'cpp': ['clang', 'g++'],
+			\'python': ['flake8', 'mypy', 'pylint']  }
 
-"let g:ale_sign_error = '❌'
-"let g:ale_sign_warning = '⚠️'
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
 "let g:ale_linters = {'c': ['gcc']}
 "let b:ale_fixers = ['prettier', 'eslint']
 "let g:ale_echo_msg_error_str = 'E'
