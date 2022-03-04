@@ -136,17 +136,17 @@ let g:airline#extensions#tabline#enabled = 1
 "         ale          "
 """"""""""""""""""""""""
 let g:ale_linters = {
-			\'c': ['clang'], 
-			\'cpp': ['clang', 'g++'],
-			\'python': ['flake8', 'mypy', 'pylint']  }
+			\'c': ['gcc'], 
+			\'cpp': ['g++'],
+			\'python': ['pylint']  } 
 
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
 "let g:ale_linters = {'c': ['gcc']}
 "let b:ale_fixers = ['prettier', 'eslint']
-"let g:ale_echo_msg_error_str = 'E'
-"let g:ale_echo_msg_warning_str = 'W'
-"let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 "highlight ALEErrorSign ctermbg=NONE ctermfg=red
 "highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
