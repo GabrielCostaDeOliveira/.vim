@@ -13,15 +13,15 @@ call plug#begin('~/.vim/plugged')
 	"rainbow 
 "	Plug 'luochen1990/rainbow'
 	"JSX syntax highlighting and indenting
-	Plug 'maxmellon/vim-jsx-pretty'
+	"Plug 'maxmellon/vim-jsx-pretty'
 	"close tag
-	Plug 'mattn/emmet-vim'
+	"Plug 'mattn/emmet-vim'
 	"sintaxe sytale components
-	Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+	"Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 	"close brackets
-	Plug 'jiangmiao/auto-pairs'
+"	Plug 'jiangmiao/auto-pairs'
 	"tex
-	Plug 'lervag/vimtex'
+	"Plug 'lervag/vimtex'
 	"Ale
 	Plug 'dense-analysis/ale'
 	call plug#end()
@@ -139,16 +139,16 @@ let g:ale_linters = {
 			\'c': ['gcc'], 
 			\'cpp': ['g++'],
 			\'python': ['pylint']  } 
+"let g:ale_linters = {'c': ['gcc']}
+"let b:ale_fixers = ['prettier', 'eslint']
 
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
-"let g:ale_linters = {'c': ['gcc']}
-"let b:ale_fixers = ['prettier', 'eslint']
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-"highlight ALEErrorSign ctermbg=NONE ctermfg=red
-"highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
 """"""""""""""""""""""""
 "       termbug        "
