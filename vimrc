@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged')
 	"git 
 	Plug 'airblade/vim-gitgutter'
 	"rainbow 
-"	Plug 'luochen1990/rainbow'
+	Plug 'luochen1990/rainbow'
 	"JSX syntax highlighting and indenting
 	"Plug 'maxmellon/vim-jsx-pretty'
 	"close tag
@@ -19,9 +19,9 @@ call plug#begin('~/.vim/plugged')
 	"sintaxe sytale components
 	"Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 	"close brackets
-"	Plug 'jiangmiao/auto-pairs'
+	Plug 'jiangmiao/auto-pairs'
 	"tex
-	"Plug 'lervag/vimtex'
+	Plug 'lervag/vimtex'
 	"Ale
 	Plug 'dense-analysis/ale'
 	call plug#end()
@@ -141,6 +141,8 @@ let g:ale_linters = {
 			\'python': ['pylint']  } 
 "let g:ale_linters = {'c': ['gcc']}
 "let b:ale_fixers = ['prettier', 'eslint']
+let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
+let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++1z'
 
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
