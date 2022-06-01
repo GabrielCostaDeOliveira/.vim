@@ -141,11 +141,14 @@ let g:ale_linters = {
 			\'python': ['pylint']  } 
 "let g:ale_linters = {'c': ['gcc']}
 "let b:ale_fixers = ['prettier', 'eslint']
-let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
-let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++1z'
+let g:ale_disable_lsp = 1
+"let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
+"let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++1z'
 
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '⚠️'
+"let g:ale_sign_error = '❌'
+"let g:ale_sign_warning = '⚠️'
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '●'
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
@@ -183,14 +186,19 @@ map q :quit<CR>
 map <leader>; A;<esc>
 map <C-q> :quit!<CR>
 map <leader>j :bo term<CR>
+
+"movimentação rapida nas abas
+
 map <leader>f <C-6>
+map <C-h> :bprevious<CR>
+map <C-l> :bnext<CR>
 
 "Movimentação de tela rápida
 
-nmap <silent> <C-h> <C-w>h
-nmap <silent> <C-j> <C-w>j
-nmap <silent> <C-k> <C-w>k
-nmap <silent> <C-l> <C-w>l
+"nmap <silent> <C-h> <C-w>h
+"nmap <silent> <C-j> <C-w>j
+"nmap <silent> <C-k> <C-w>k
+"nmap <silent> <C-l> <C-w>l
 
 
 "Quicky space to normal mode
@@ -204,6 +212,6 @@ imap jj <esc>
 "nnoremap <C-f> :NERDTreeFind<CR>
 
 "seleção híbrida para mostrar o numero de linha 
-autocmd InsertEnter * :set norelativenumber
-autocmd InsertLeave * :set relativenumber 
+"autocmd InsertEnter * :set norelativenumber
+"autocmd InsertLeave * :set relativenumber 
 
