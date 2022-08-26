@@ -142,6 +142,12 @@ let g:ale_linters = {
 "let g:ale_linters = {'c': ['gcc']}
 "let b:ale_fixers = ['prettier', 'eslint']
 let g:ale_disable_lsp = 1
+let g:ale_lint_on_enter = 0
+let g:ale_fix_on_save = 1
+let g:ale_fix_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+
 "let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
 "let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++1z'
 
