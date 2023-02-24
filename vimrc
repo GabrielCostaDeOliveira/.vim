@@ -135,6 +135,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:ale_linters = {
 			\'c': ['gcc'], 
 			\'cpp': ['g++']}
+"let g:ale_fixers={'python': ['black']}
 "			\'python': ['python -m mypy']  } 
 "let g:ale_linters = {'c': ['gcc']}
 "let b:ale_fixers = ['prettier', 'eslint']
@@ -185,7 +186,7 @@ let g:user_emmet_settings = {
 """"""""""""""""""""""""
 let mapleader="\<space>"
 
-map q :quit<CR>
+map Q :quit<CR>
 map <leader>; A;<esc>
 map <C-q> :quit!<CR>
 map <leader>j :bo term<CR>
